@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float timeToShowCorrcetAnswer = 10f;
     public bool isAnsweringQuestion = false;
     public bool loadNextQuestion;
+
     public float fillFraction;
 
     float timerValue;
@@ -23,6 +24,7 @@ public class Timer : MonoBehaviour
         timerValue -= Time.deltaTime;
 
         if (isAnsweringQuestion)
+
         {
             if (timerValue > 0)
             {
@@ -47,9 +49,6 @@ public class Timer : MonoBehaviour
                 loadNextQuestion = true;
             }
         }
-        
-
-        
-        Debug.Log(isAnsweringQuestion + ":" +timerValue +"=" + fillFraction);
+        Debug.Log(isAnsweringQuestion + ":" + timerValue + "=" + fillFraction);
     }
 }
